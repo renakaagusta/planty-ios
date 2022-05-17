@@ -8,15 +8,17 @@
 import SwiftUI
 
 struct AppTextField: View {
+    @State var placeholder = "Search..."
     @State var text = ""
+    @State var image = ""
     
     var body: some View {
         VStack(alignment: .leading) {
             HStack() {
-                Spacer()
-                Image(systemName: "magnifyingglass")
-                TextField("Search...", text: $text).frame(minWidth:0).frame(minWidth: 0, maxWidth: 100, minHeight: 16, maxHeight: 16)
-                Spacer()
+                if(image != "") {
+                    Image(systemName: "magnifyingglass")
+                }
+                TextField(placeholder, text: $text).frame(minWidth:0).frame(minWidth: 0, maxWidth: .infinity, minHeight: 16, maxHeight: 16)
             }.padding().background(Color.lightGray).cornerRadius(10)
         }
     }

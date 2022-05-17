@@ -7,40 +7,49 @@
 
 import SwiftUI
 
-struct ArticleCard: View {
+struct PostCard: View {
+    
+    @State var writer = User()
+    @State var post = Post()
+    
     var body: some View {
         VStack{
-            Image("Article").resizable()
+            AsyncImage(url: URL(string: post.image)!,
+                          placeholder: { Text("Loading ...") },
+                          image: { Image(uiImage: $0).resizable() })
             VStack{
                 HStack{
-                    Spacer().frame(width: 10)
-                    Text("David Austin, who Breathed Life Into the Rose, Is Dead at 92").font(Font.subheadline.bold())
-                    Spacer().frame(width: 10)
+                    Spacer().frame(width: 2)
+                    Text(post.title).font(Font.subheadline.bold()).foregroundColor(Color.white)
+                    Spacer().frame(width: 2)
                 }
                 Spacer().frame(height: 15)
                 HStack{
                     Spacer().frame(width: 20)
-                    Image("Profile").resizable().frame(width: 30, height: 30).cornerRadius(30)
+                    AsyncImage(url: URL(string: writer.photo)!,
+                                  placeholder: { Text("Loading ...") },
+                                  image: { Image(uiImage: $0).resizable() })
+                          .frame(width: 30, height: 30).cornerRadius(30)
                     HStack{
                         VStack(alignment: .leading){
-                            Text("Admin").font(Font.caption.bold())
+                            Text(writer.username).font(Font.caption.bold())
                             Spacer().frame(height: 5)
                             Text("17 Jan 2021").font(Font.caption2).foregroundColor(.gray)
                         }
                     }
                     Spacer()
-                    Image(systemName: "heart")
+                    //Image(systemName: "heart")
                     Spacer().frame(width: 20)
                 }
                 Spacer().frame(height: 5)
             }.frame(width: 300, height: 100)
-        }.background(.white).frame(height: 250).cornerRadius(20)
+        }.frame(height: 250).cornerRadius(20)
             .shadow(color: .lightGray, radius: 2, x: 0, y: 2)
     }
 }
 
-struct ArticleCard_Previews: PreviewProvider {
+struct PostCard_Previews: PreviewProvider {
     static var previews: some View {
-        ArticleCard()
+        PostCard()
     }
 }

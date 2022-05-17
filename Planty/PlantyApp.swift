@@ -6,18 +6,67 @@
 //
 
 import SwiftUI
+import Firebase
+import GoogleSignIn
 
-extension Color {
-    static let primaryColor = Color(red: 74 / 255, green: 156 / 255, blue: 128 / 255)
-    static let secondaryColor = Color(red: 223 / 255, green: 233 / 255, blue: 230 / 255)
-    static let lightGray = Color(red: 234 / 255, green: 234 / 255, blue: 234 / 255)
+extension PlantyApp {
+  private func setupAuthentication() {
+    FirebaseApp.configure()
+  }
+}
+
+extension View {
+    func navigate<NewView: View>(to view: NewView, when binding: Binding<Bool>) -> some View {
+        NavigationView {
+            ZStack {
+                self
+                    .navigationBarTitle("")
+                    .navigationBarHidden(true)
+
+                NavigationLink(
+                    destination: view
+                        .navigationBarTitle("")
+                        .navigationBarHidden(true),
+                    isActive: binding
+                ) {
+                    EmptyView()
+                }
+            }
+        }
+        .navigationViewStyle(.stack)
+    }
+}
+
+extension UINavigationController {
+    open override func viewWillLayoutSubviews() {
+        navigationBar.topItem?.backButtonDisplayMode = .minimal
+    }
 }
 
 @main
 struct PlantyApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
+    init() {
+      setupAuthentication()
+    }
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView{
+                ContentView()
+            }.navigationViewStyle(StackNavigationViewStyle()).navigationTitle("Kasir")
         }
+    }
+}
+
+class AppDelegate: NSObject, UIApplicationDelegate {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        print("Your code here")
+        return true
+    }
+    func application(_ application: UIApplication, open url: URL,
+                     options: [UIApplication.OpenURLOptionsKey: Any])
+      -> Bool {
+      return GIDSignIn.sharedInstance.handle(url)
     }
 }

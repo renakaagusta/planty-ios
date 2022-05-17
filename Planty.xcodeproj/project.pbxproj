@@ -7,8 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F00326128259507000D195E /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F00326028259507000D195E /* FirebaseAuthManager.swift */; };
+		2F0D26D2282E124800EEF121 /* MarkupEditor in Frameworks */ = {isa = PBXBuildFile; productRef = 2F0D26D1282E124800EEF121 /* MarkupEditor */; };
+		2F0D26D4282E128000EEF121 /* ArticleFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0D26D3282E128000EEF121 /* ArticleFormView.swift */; };
+		2F0D26D6282E15EA00EEF121 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0D26D5282E15EA00EEF121 /* ImagePicker.swift */; };
+		2F0D26D9282E233500EEF121 /* ArticleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0D26D8282E233500EEF121 /* ArticleListView.swift */; };
+		2F0D26DB282E2A9700EEF121 /* PlantFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0D26DA282E2A9700EEF121 /* PlantFormView.swift */; };
 		2F1870A5281CCF4C00383F23 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1870A4281CCF4C00383F23 /* ProfileView.swift */; };
 		2F1870A7281CD86900383F23 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1870A6281CD86900383F23 /* SignInView.swift */; };
+		2F1870AE281CDB6A00383F23 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1870AD281CDB6A00383F23 /* Colors.swift */; };
+		2F1870B0281CDC1700383F23 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1870AF281CDC1700383F23 /* Strings.swift */; };
 		2F2931F8281A29E300F06C24 /* PlantyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2931F7281A29E300F06C24 /* PlantyApp.swift */; };
 		2F2931FA281A29E300F06C24 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2931F9281A29E300F06C24 /* ContentView.swift */; };
 		2F2931FC281A29E300F06C24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F2931FB281A29E300F06C24 /* Assets.xcassets */; };
@@ -21,10 +29,42 @@
 		2F293230281A315900F06C24 /* OutlinedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F29322F281A315900F06C24 /* OutlinedButton.swift */; };
 		2F34BCD9281ACC9B00F55687 /* PlantCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F34BCD8281ACC9B00F55687 /* PlantCard.swift */; };
 		2F34BCDB281ADF3A00F55687 /* ArticleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F34BCDA281ADF3A00F55687 /* ArticleCard.swift */; };
+		2F478DFA2827D7470023CAFA /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F478DF92827D7470023CAFA /* DashboardView.swift */; };
+		2F478DFC282800FE0023CAFA /* PlantListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F478DFB282800FE0023CAFA /* PlantListView.swift */; };
+		2F478E00282804F50023CAFA /* UserCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F478DFF282804F50023CAFA /* UserCollection.swift */; };
+		2F5B4BF02826F734003697A3 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5B4BEF2826F734003697A3 /* SQLite.framework */; };
+		2F7299BD282F311E00E7C945 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 2F7299BC282F311E00E7C945 /* Lottie */; };
+		2F7299BF282F316600E7C945 /* OnBoardingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7299BE282F316600E7C945 /* OnBoardingCard.swift */; };
+		2F7299C1282F31B400E7C945 /* OnBoardingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7299C0282F31B400E7C945 /* OnBoardingAnimation.swift */; };
+		2F7299C3282F32CE00E7C945 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7299C2282F32CE00E7C945 /* OnBoardingView.swift */; };
+		2F7299C5282F337D00E7C945 /* OnBoardCardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7299C4282F337D00E7C945 /* OnBoardCardData.swift */; };
+		2F7299C7282F361000E7C945 /* Planting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7299C6282F361000E7C945 /* Planting.swift */; };
+		2F7299C9282F369F00E7C945 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7299C8282F369F00E7C945 /* Post.swift */; };
+		2F7299CB282F372100E7C945 /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7299CA282F372100E7C945 /* Plant.swift */; };
+		2F7299CD282F637600E7C945 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F7299CC282F637600E7C945 /* LaunchScreen.storyboard */; };
+		2F7299CF282FCC9700E7C945 /* CloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7299CE282FCC9700E7C945 /* CloudKit.swift */; };
+		2F7299D1282FD86900E7C945 /* PlantingListIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7299D0282FD86900E7C945 /* PlantingListIView.swift */; };
+		2FAE544E282C9F460061979A /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAE544D282C9F460061979A /* CloudKit.framework */; };
+		2FBADB102826BDA300E6AE8B /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2FBADB0F2826BDA300E6AE8B /* FirebaseAnalyticsSwift */; };
+		2FBADB122826BDA300E6AE8B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 2FBADB112826BDA300E6AE8B /* FirebaseAuth */; };
+		2FBADB142826BDA300E6AE8B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 2FBADB132826BDA300E6AE8B /* FirebaseFirestore */; };
+		2FBADB162826BDA300E6AE8B /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2FBADB152826BDA300E6AE8B /* FirebaseFirestoreSwift */; };
+		2FBADB182826BDA300E6AE8B /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 2FBADB172826BDA300E6AE8B /* FirebaseStorage */; };
+		2FBADB1B2826C3C000E6AE8B /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 2FBADB1A2826C3C000E6AE8B /* GoogleSignIn */; };
+		2FBADB1D2826C68000E6AE8B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2FBADB1C2826C68000E6AE8B /* GoogleService-Info.plist */; };
+		2FBADB272826DC9E00E6AE8B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBADB262826DC9E00E6AE8B /* User.swift */; };
+		2FBADB292826DD4400E6AE8B /* UserDbManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBADB282826DD4400E6AE8B /* UserDbManager.swift */; };
 		2FE1F501281A930300532AD0 /* FlatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE1F500281A930300532AD0 /* FlatButton.swift */; };
 		2FE1F503281ABF7E00532AD0 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE1F502281ABF7E00532AD0 /* AddButton.swift */; };
 		2FE1F505281AC0A100532AD0 /* MinusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE1F504281AC0A100532AD0 /* MinusButton.swift */; };
 		2FE1F508281AC28E00532AD0 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE1F507281AC28E00532AD0 /* TextField.swift */; };
+		2FF92E072833340F00D80CCA /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF92E062833340F00D80CCA /* AsyncImage.swift */; };
+		2FF92E0A2833398400D80CCA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2FF92E092833398400D80CCA /* Alamofire */; };
+		2FF92E0D283339AA00D80CCA /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 2FF92E0C283339AA00D80CCA /* SwiftyJSON */; };
+		2FF92E0F28336E5100D80CCA /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF92E0E28336E5100D80CCA /* Date.swift */; };
+		685F213F18A744B507D46FF7 /* Pods_Planty_PlantyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 916D94619EE5E5F71DDD3AA6 /* Pods_Planty_PlantyUITests.framework */; };
+		D5A0D618AFDE360076FB9A7C /* Pods_PlantyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E10C624E74F9729F3ADEFFA /* Pods_PlantyTests.framework */; };
+		DD6F8BFA89DC589CD85B93B7 /* Pods_Planty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 105D474757AE5D981E2C11E8 /* Pods_Planty.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,8 +85,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E10C624E74F9729F3ADEFFA /* Pods_PlantyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlantyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		105D474757AE5D981E2C11E8 /* Pods_Planty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Planty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F00326028259507000D195E /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
+		2F003262282596B1000D195E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2F0D26D3282E128000EEF121 /* ArticleFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleFormView.swift; sourceTree = "<group>"; };
+		2F0D26D5282E15EA00EEF121 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		2F0D26D8282E233500EEF121 /* ArticleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListView.swift; sourceTree = "<group>"; };
+		2F0D26DA282E2A9700EEF121 /* PlantFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantFormView.swift; sourceTree = "<group>"; };
 		2F1870A4281CCF4C00383F23 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		2F1870A6281CD86900383F23 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		2F1870AD281CDB6A00383F23 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		2F1870AF281CDC1700383F23 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		2F2931F4281A29E300F06C24 /* Planty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Planty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F2931F7281A29E300F06C24 /* PlantyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantyApp.swift; sourceTree = "<group>"; };
 		2F2931F9281A29E300F06C24 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,10 +112,38 @@
 		2F29322F281A315900F06C24 /* OutlinedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlinedButton.swift; sourceTree = "<group>"; };
 		2F34BCD8281ACC9B00F55687 /* PlantCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantCard.swift; sourceTree = "<group>"; };
 		2F34BCDA281ADF3A00F55687 /* ArticleCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCard.swift; sourceTree = "<group>"; };
+		2F478DF92827D7470023CAFA /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		2F478DFB282800FE0023CAFA /* PlantListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantListView.swift; sourceTree = "<group>"; };
+		2F478DFF282804F50023CAFA /* UserCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollection.swift; sourceTree = "<group>"; };
+		2F5B4BEF2826F734003697A3 /* SQLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SQLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F7299BE282F316600E7C945 /* OnBoardingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCard.swift; sourceTree = "<group>"; };
+		2F7299C0282F31B400E7C945 /* OnBoardingAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingAnimation.swift; sourceTree = "<group>"; };
+		2F7299C2282F32CE00E7C945 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
+		2F7299C4282F337D00E7C945 /* OnBoardCardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardCardData.swift; sourceTree = "<group>"; };
+		2F7299C6282F361000E7C945 /* Planting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planting.swift; sourceTree = "<group>"; };
+		2F7299C8282F369F00E7C945 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		2F7299CA282F372100E7C945 /* Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
+		2F7299CC282F637600E7C945 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2F7299CE282FCC9700E7C945 /* CloudKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKit.swift; sourceTree = "<group>"; };
+		2F7299D0282FD86900E7C945 /* PlantingListIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantingListIView.swift; sourceTree = "<group>"; };
+		2FAE544C282C9F360061979A /* Planty.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Planty.entitlements; sourceTree = "<group>"; };
+		2FAE544D282C9F460061979A /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		2FBADB1C2826C68000E6AE8B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2FBADB262826DC9E00E6AE8B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2FBADB282826DD4400E6AE8B /* UserDbManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDbManager.swift; sourceTree = "<group>"; };
 		2FE1F500281A930300532AD0 /* FlatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatButton.swift; sourceTree = "<group>"; };
 		2FE1F502281ABF7E00532AD0 /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
 		2FE1F504281AC0A100532AD0 /* MinusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinusButton.swift; sourceTree = "<group>"; };
 		2FE1F507281AC28E00532AD0 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		2FF92E062833340F00D80CCA /* AsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
+		2FF92E0E28336E5100D80CCA /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		34AA0B89A7B3834E886B6FC7 /* Pods-Planty-PlantyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Planty-PlantyUITests.release.xcconfig"; path = "Target Support Files/Pods-Planty-PlantyUITests/Pods-Planty-PlantyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4C51B985C4417EEE85D49973 /* Pods-Planty-PlantyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Planty-PlantyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Planty-PlantyUITests/Pods-Planty-PlantyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7FA75041B3B79D6823536A06 /* Pods-Planty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Planty.debug.xcconfig"; path = "Target Support Files/Pods-Planty/Pods-Planty.debug.xcconfig"; sourceTree = "<group>"; };
+		87A1E0B6E3EB9211AFFD1D99 /* Pods-PlantyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlantyTests.release.xcconfig"; path = "Target Support Files/Pods-PlantyTests/Pods-PlantyTests.release.xcconfig"; sourceTree = "<group>"; };
+		916D94619EE5E5F71DDD3AA6 /* Pods_Planty_PlantyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Planty_PlantyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D562068B47A2A863023093FD /* Pods-Planty.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Planty.release.xcconfig"; path = "Target Support Files/Pods-Planty/Pods-Planty.release.xcconfig"; sourceTree = "<group>"; };
+		EF5A27A309ABFAFC0FBA78B7 /* Pods-PlantyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlantyTests.debug.xcconfig"; path = "Target Support Files/Pods-PlantyTests/Pods-PlantyTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +151,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FF92E0D283339AA00D80CCA /* SwiftyJSON in Frameworks */,
+				2F5B4BF02826F734003697A3 /* SQLite.framework in Frameworks */,
+				2F0D26D2282E124800EEF121 /* MarkupEditor in Frameworks */,
+				2FBADB102826BDA300E6AE8B /* FirebaseAnalyticsSwift in Frameworks */,
+				2FBADB122826BDA300E6AE8B /* FirebaseAuth in Frameworks */,
+				2FAE544E282C9F460061979A /* CloudKit.framework in Frameworks */,
+				2FBADB142826BDA300E6AE8B /* FirebaseFirestore in Frameworks */,
+				2F7299BD282F311E00E7C945 /* Lottie in Frameworks */,
+				2FBADB182826BDA300E6AE8B /* FirebaseStorage in Frameworks */,
+				2FBADB162826BDA300E6AE8B /* FirebaseFirestoreSwift in Frameworks */,
+				2FF92E0A2833398400D80CCA /* Alamofire in Frameworks */,
+				2FBADB1B2826C3C000E6AE8B /* GoogleSignIn in Frameworks */,
+				DD6F8BFA89DC589CD85B93B7 /* Pods_Planty.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +171,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5A0D618AFDE360076FB9A7C /* Pods_PlantyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,19 +179,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				685F213F18A744B507D46FF7 /* Pods_Planty_PlantyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F1870A8281CDAFD00383F23 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				2F1870AD281CDB6A00383F23 /* Colors.swift */,
+				2F1870AF281CDC1700383F23 /* Strings.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		2F2931EB281A29E300F06C24 = {
 			isa = PBXGroup;
 			children = (
+				2FBADB1C2826C68000E6AE8B /* GoogleService-Info.plist */,
 				2F2931F6281A29E300F06C24 /* Planty */,
 				2F293207281A29E400F06C24 /* PlantyTests */,
 				2F293211281A29E400F06C24 /* PlantyUITests */,
 				2F2931F5281A29E300F06C24 /* Products */,
+				EE39CEE3CEE852ED81E10D92 /* Pods */,
+				4BC6B5FC827921BA2EE71645 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,7 +221,10 @@
 		2F2931F6281A29E300F06C24 /* Planty */ = {
 			isa = PBXGroup;
 			children = (
+				2FAE544C282C9F360061979A /* Planty.entitlements */,
+				2F003262282596B1000D195E /* Info.plist */,
 				2F2931F7281A29E300F06C24 /* PlantyApp.swift */,
+				2F1870A8281CDAFD00383F23 /* Constants */,
 				2F293224281A2AA100F06C24 /* Data */,
 				2F293223281A2A9700F06C24 /* Helpers */,
 				2F293222281A2A9100F06C24 /* Utils */,
@@ -158,10 +266,7 @@
 				2F293229281A30E300F06C24 /* Atoms */,
 				2F29322A281A30F300F06C24 /* Moleculs */,
 				2F293228281A30DB00F06C24 /* Pages */,
-				2F293225281A307F00F06C24 /* HomeView.swift */,
-				2F1870A4281CCF4C00383F23 /* ProfileView.swift */,
-				2F1870A6281CD86900383F23 /* SignInView.swift */,
-				2F2931F9281A29E300F06C24 /* ContentView.swift */,
+				2F7299CC282F637600E7C945 /* LaunchScreen.storyboard */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -169,6 +274,7 @@
 		2F293222281A2A9100F06C24 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				2FF92E0E28336E5100D80CCA /* Date.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -176,6 +282,7 @@
 		2F293223281A2A9700F06C24 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				2F00326028259507000D195E /* FirebaseAuthManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -183,6 +290,9 @@
 		2F293224281A2AA100F06C24 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				2FBADB252826DC9300E6AE8B /* Model */,
+				2FBADB1F2826D9C200E6AE8B /* Remote */,
+				2FBADB1E2826D9B600E6AE8B /* Local */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -190,6 +300,17 @@
 		2F293228281A30DB00F06C24 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				2F293225281A307F00F06C24 /* HomeView.swift */,
+				2F7299C2282F32CE00E7C945 /* OnBoardingView.swift */,
+				2F1870A4281CCF4C00383F23 /* ProfileView.swift */,
+				2F1870A6281CD86900383F23 /* SignInView.swift */,
+				2F2931F9281A29E300F06C24 /* ContentView.swift */,
+				2F478DF92827D7470023CAFA /* DashboardView.swift */,
+				2F478DFB282800FE0023CAFA /* PlantListView.swift */,
+				2F0D26D3282E128000EEF121 /* ArticleFormView.swift */,
+				2F0D26D8282E233500EEF121 /* ArticleListView.swift */,
+				2F0D26DA282E2A9700EEF121 /* PlantFormView.swift */,
+				2F7299D0282FD86900E7C945 /* PlantingListIView.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -197,6 +318,7 @@
 		2F293229281A30E300F06C24 /* Atoms */ = {
 			isa = PBXGroup;
 			children = (
+				2FF92E05283333FB00D80CCA /* Image */,
 				2F34BCD7281ACC8000F55687 /* Card */,
 				2FE1F506281AC21E00532AD0 /* TextField */,
 				2F29322B281A311A00F06C24 /* Button */,
@@ -207,6 +329,8 @@
 		2F29322A281A30F300F06C24 /* Moleculs */ = {
 			isa = PBXGroup;
 			children = (
+				2F7299C0282F31B400E7C945 /* OnBoardingAnimation.swift */,
+				2F0D26D5282E15EA00EEF121 /* ImagePicker.swift */,
 			);
 			path = Moleculs;
 			sourceTree = "<group>";
@@ -228,8 +352,38 @@
 			children = (
 				2F34BCD8281ACC9B00F55687 /* PlantCard.swift */,
 				2F34BCDA281ADF3A00F55687 /* ArticleCard.swift */,
+				2F7299BE282F316600E7C945 /* OnBoardingCard.swift */,
 			);
 			path = Card;
+			sourceTree = "<group>";
+		};
+		2FBADB1E2826D9B600E6AE8B /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				2FBADB282826DD4400E6AE8B /* UserDbManager.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		2FBADB1F2826D9C200E6AE8B /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				2F478DFF282804F50023CAFA /* UserCollection.swift */,
+				2F7299CE282FCC9700E7C945 /* CloudKit.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		2FBADB252826DC9300E6AE8B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2FBADB262826DC9E00E6AE8B /* User.swift */,
+				2F7299C4282F337D00E7C945 /* OnBoardCardData.swift */,
+				2F7299C6282F361000E7C945 /* Planting.swift */,
+				2F7299C8282F369F00E7C945 /* Post.swift */,
+				2F7299CA282F372100E7C945 /* Plant.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		2FE1F506281AC21E00532AD0 /* TextField */ = {
@@ -240,6 +394,39 @@
 			path = TextField;
 			sourceTree = "<group>";
 		};
+		2FF92E05283333FB00D80CCA /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				2FF92E062833340F00D80CCA /* AsyncImage.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		4BC6B5FC827921BA2EE71645 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2FAE544D282C9F460061979A /* CloudKit.framework */,
+				2F5B4BEF2826F734003697A3 /* SQLite.framework */,
+				105D474757AE5D981E2C11E8 /* Pods_Planty.framework */,
+				916D94619EE5E5F71DDD3AA6 /* Pods_Planty_PlantyUITests.framework */,
+				0E10C624E74F9729F3ADEFFA /* Pods_PlantyTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EE39CEE3CEE852ED81E10D92 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7FA75041B3B79D6823536A06 /* Pods-Planty.debug.xcconfig */,
+				D562068B47A2A863023093FD /* Pods-Planty.release.xcconfig */,
+				4C51B985C4417EEE85D49973 /* Pods-Planty-PlantyUITests.debug.xcconfig */,
+				34AA0B89A7B3834E886B6FC7 /* Pods-Planty-PlantyUITests.release.xcconfig */,
+				EF5A27A309ABFAFC0FBA78B7 /* Pods-PlantyTests.debug.xcconfig */,
+				87A1E0B6E3EB9211AFFD1D99 /* Pods-PlantyTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -247,15 +434,29 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F293218281A29E400F06C24 /* Build configuration list for PBXNativeTarget "Planty" */;
 			buildPhases = (
+				270068302C9883AA09D75345 /* [CP] Check Pods Manifest.lock */,
 				2F2931F0281A29E300F06C24 /* Sources */,
 				2F2931F1281A29E300F06C24 /* Frameworks */,
 				2F2931F2281A29E300F06C24 /* Resources */,
+				17A7FF7BC7F7059ECE69A0D8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Planty;
+			packageProductDependencies = (
+				2FBADB0F2826BDA300E6AE8B /* FirebaseAnalyticsSwift */,
+				2FBADB112826BDA300E6AE8B /* FirebaseAuth */,
+				2FBADB132826BDA300E6AE8B /* FirebaseFirestore */,
+				2FBADB152826BDA300E6AE8B /* FirebaseFirestoreSwift */,
+				2FBADB172826BDA300E6AE8B /* FirebaseStorage */,
+				2FBADB1A2826C3C000E6AE8B /* GoogleSignIn */,
+				2F0D26D1282E124800EEF121 /* MarkupEditor */,
+				2F7299BC282F311E00E7C945 /* Lottie */,
+				2FF92E092833398400D80CCA /* Alamofire */,
+				2FF92E0C283339AA00D80CCA /* SwiftyJSON */,
+			);
 			productName = Planty;
 			productReference = 2F2931F4281A29E300F06C24 /* Planty.app */;
 			productType = "com.apple.product-type.application";
@@ -264,6 +465,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F29321B281A29E400F06C24 /* Build configuration list for PBXNativeTarget "PlantyTests" */;
 			buildPhases = (
+				CDA2DDC91457D8461B8D67E7 /* [CP] Check Pods Manifest.lock */,
 				2F293200281A29E400F06C24 /* Sources */,
 				2F293201281A29E400F06C24 /* Frameworks */,
 				2F293202281A29E400F06C24 /* Resources */,
@@ -282,9 +484,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F29321E281A29E400F06C24 /* Build configuration list for PBXNativeTarget "PlantyUITests" */;
 			buildPhases = (
+				A3B0A1D88F9E9D065DB29DBA /* [CP] Check Pods Manifest.lock */,
 				2F29320A281A29E400F06C24 /* Sources */,
 				2F29320B281A29E400F06C24 /* Frameworks */,
 				2F29320C281A29E400F06C24 /* Resources */,
+				02EE93C1899A176150D3FD17 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -328,6 +532,14 @@
 				Base,
 			);
 			mainGroup = 2F2931EB281A29E300F06C24;
+			packageReferences = (
+				2F00325F2825943F000D195E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				2FBADB192826C3C000E6AE8B /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				2F0D26D0282E124800EEF121 /* XCRemoteSwiftPackageReference "MarkupEditor" */,
+				2F7299BB282F311D00E7C945 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				2FF92E082833398400D80CCA /* XCRemoteSwiftPackageReference "Alamofire" */,
+				2FF92E0B283339A900D80CCA /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = 2F2931F5281A29E300F06C24 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -345,7 +557,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F2931FF281A29E300F06C24 /* Preview Assets.xcassets in Resources */,
+				2F7299CD282F637600E7C945 /* LaunchScreen.storyboard in Resources */,
 				2F2931FC281A29E300F06C24 /* Assets.xcassets in Resources */,
+				2FBADB1D2826C68000E6AE8B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,22 +579,148 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		02EE93C1899A176150D3FD17 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Planty-PlantyUITests/Pods-Planty-PlantyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Planty-PlantyUITests/Pods-Planty-PlantyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Planty-PlantyUITests/Pods-Planty-PlantyUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		17A7FF7BC7F7059ECE69A0D8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Planty/Pods-Planty-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Planty/Pods-Planty-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Planty/Pods-Planty-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		270068302C9883AA09D75345 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Planty-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3B0A1D88F9E9D065DB29DBA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Planty-PlantyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDA2DDC91457D8461B8D67E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PlantyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2F2931F0281A29E300F06C24 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FF92E072833340F00D80CCA /* AsyncImage.swift in Sources */,
 				2FE1F501281A930300532AD0 /* FlatButton.swift in Sources */,
+				2F7299CF282FCC9700E7C945 /* CloudKit.swift in Sources */,
+				2F1870AE281CDB6A00383F23 /* Colors.swift in Sources */,
 				2FE1F503281ABF7E00532AD0 /* AddButton.swift in Sources */,
+				2F00326128259507000D195E /* FirebaseAuthManager.swift in Sources */,
 				2F293230281A315900F06C24 /* OutlinedButton.swift in Sources */,
+				2FF92E0F28336E5100D80CCA /* Date.swift in Sources */,
+				2F7299CB282F372100E7C945 /* Plant.swift in Sources */,
+				2F7299BF282F316600E7C945 /* OnBoardingCard.swift in Sources */,
+				2F478E00282804F50023CAFA /* UserCollection.swift in Sources */,
 				2F293226281A307F00F06C24 /* HomeView.swift in Sources */,
+				2F7299C1282F31B400E7C945 /* OnBoardingAnimation.swift in Sources */,
+				2F7299C7282F361000E7C945 /* Planting.swift in Sources */,
+				2F0D26D4282E128000EEF121 /* ArticleFormView.swift in Sources */,
+				2F0D26D9282E233500EEF121 /* ArticleListView.swift in Sources */,
 				2F1870A5281CCF4C00383F23 /* ProfileView.swift in Sources */,
 				2FE1F505281AC0A100532AD0 /* MinusButton.swift in Sources */,
+				2F7299C3282F32CE00E7C945 /* OnBoardingView.swift in Sources */,
+				2F7299D1282FD86900E7C945 /* PlantingListIView.swift in Sources */,
+				2F478DFA2827D7470023CAFA /* DashboardView.swift in Sources */,
+				2F1870B0281CDC1700383F23 /* Strings.swift in Sources */,
 				2F29322D281A312D00F06C24 /* ElevatedButton.swift in Sources */,
+				2FBADB292826DD4400E6AE8B /* UserDbManager.swift in Sources */,
+				2F478DFC282800FE0023CAFA /* PlantListView.swift in Sources */,
+				2F7299C9282F369F00E7C945 /* Post.swift in Sources */,
 				2F34BCDB281ADF3A00F55687 /* ArticleCard.swift in Sources */,
 				2FE1F508281AC28E00532AD0 /* TextField.swift in Sources */,
 				2F34BCD9281ACC9B00F55687 /* PlantCard.swift in Sources */,
+				2F0D26DB282E2A9700EEF121 /* PlantFormView.swift in Sources */,
+				2FBADB272826DC9E00E6AE8B /* User.swift in Sources */,
+				2F7299C5282F337D00E7C945 /* OnBoardCardData.swift in Sources */,
 				2F2931FA281A29E300F06C24 /* ContentView.swift in Sources */,
+				2F0D26D6282E15EA00EEF121 /* ImagePicker.swift in Sources */,
 				2F2931F8281A29E300F06C24 /* PlantyApp.swift in Sources */,
 				2F1870A7281CD86900383F23 /* SignInView.swift in Sources */,
 			);
@@ -470,7 +810,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -525,7 +865,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -537,27 +877,34 @@
 		};
 		2F293219281A29E400F06C24 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FA75041B3B79D6823536A06 /* Pods-Planty.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Planty/Planty.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Planty/Preview Content\"";
 				DEVELOPMENT_TEAM = KZ9PN4535G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Planty/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.renaka.movie.Planty;
+				PRODUCT_BUNDLE_IDENTIFIER = com.renakaagusta.planty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -566,27 +913,34 @@
 		};
 		2F29321A281A29E400F06C24 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D562068B47A2A863023093FD /* Pods-Planty.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Planty/Planty.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Planty/Preview Content\"";
 				DEVELOPMENT_TEAM = KZ9PN4535G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Planty/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.renaka.movie.Planty;
+				PRODUCT_BUNDLE_IDENTIFIER = com.renakaagusta.planty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -595,6 +949,7 @@
 		};
 		2F29321C281A29E400F06C24 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF5A27A309ABFAFC0FBA78B7 /* Pods-PlantyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -615,6 +970,7 @@
 		};
 		2F29321D281A29E400F06C24 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87A1E0B6E3EB9211AFFD1D99 /* Pods-PlantyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -635,6 +991,7 @@
 		};
 		2F29321F281A29E400F06C24 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C51B985C4417EEE85D49973 /* Pods-Planty-PlantyUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -653,6 +1010,7 @@
 		};
 		2F293220281A29E400F06C24 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34AA0B89A7B3834E886B6FC7 /* Pods-Planty-PlantyUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -709,6 +1067,110 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2F00325F2825943F000D195E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		2F0D26D0282E124800EEF121 /* XCRemoteSwiftPackageReference "MarkupEditor" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stevengharris/MarkupEditor";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.2;
+			};
+		};
+		2F7299BB282F311D00E7C945 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		2FBADB192826C3C000E6AE8B /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		2FF92E082833398400D80CCA /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		2FF92E0B283339A900D80CCA /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2F0D26D1282E124800EEF121 /* MarkupEditor */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F0D26D0282E124800EEF121 /* XCRemoteSwiftPackageReference "MarkupEditor" */;
+			productName = MarkupEditor;
+		};
+		2F7299BC282F311E00E7C945 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F7299BB282F311D00E7C945 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		2FBADB0F2826BDA300E6AE8B /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F00325F2825943F000D195E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		2FBADB112826BDA300E6AE8B /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F00325F2825943F000D195E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		2FBADB132826BDA300E6AE8B /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F00325F2825943F000D195E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		2FBADB152826BDA300E6AE8B /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F00325F2825943F000D195E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		2FBADB172826BDA300E6AE8B /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F00325F2825943F000D195E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		2FBADB1A2826C3C000E6AE8B /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FBADB192826C3C000E6AE8B /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		2FF92E092833398400D80CCA /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FF92E082833398400D80CCA /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		2FF92E0C283339AA00D80CCA /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FF92E0B283339A900D80CCA /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2F2931EC281A29E300F06C24 /* Project object */;
 }
