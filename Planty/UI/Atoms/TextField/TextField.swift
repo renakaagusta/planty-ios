@@ -9,8 +9,9 @@ import SwiftUI
 
 struct AppTextField: View {
     @State var placeholder = "Search..."
-    @State var text = ""
+    @Binding var field: String
     @State var image = ""
+    @State var numberInput = false
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -18,14 +19,10 @@ struct AppTextField: View {
                 if(image != "") {
                     Image(systemName: "magnifyingglass")
                 }
-                TextField(placeholder, text: $text).frame(minWidth:0).frame(minWidth: 0, maxWidth: .infinity, minHeight: 16, maxHeight: 16)
+                TextField(placeholder, text: $field).foregroundColor(Color.black).frame(minWidth:0).frame(minWidth: 0, maxWidth: .infinity, minHeight: 16, maxHeight: 16)
+                    .keyboardType(numberInput ? .decimalPad : .default)
             }.padding().background(Color.lightGray).cornerRadius(10)
         }
     }
 }
 
-struct AppTextField_Previews: PreviewProvider {
-    static var previews: some View {
-        AppTextField()
-    }
-}

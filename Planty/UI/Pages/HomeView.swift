@@ -95,6 +95,8 @@ struct HomeView: View {
             
             publicDatabase.add(plantListOperation)
             
+            do {sleep(1)}
+            
             // USER LIST
             
             let userListQuery = CKQuery(recordType: "UserInfo", predicate: predicate)
@@ -115,6 +117,8 @@ struct HomeView: View {
             }
             
             publicDatabase.add(userListOperation)
+            
+            do {sleep(1)}
             
             // PLANTING LIST
             
@@ -138,7 +142,9 @@ struct HomeView: View {
             }
             
             publicDatabase.add(plantingListOperation)
-                        
+            
+            do {sleep(1)}
+            
             // POST LIST
             let postListQuery = CKQuery(recordType: "Post", predicate: predicate)
                   

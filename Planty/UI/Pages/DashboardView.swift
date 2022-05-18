@@ -24,8 +24,8 @@ struct DashboardView: View {
                             Text("Beranda").foregroundColor(Color.primaryColor)
                         }.tag(1)
                     PlantListView().tabItem {
-                        Image(systemName: "dollarsign.square")
-                        Text("Ensiklopedi")
+                        Image(systemName: "leaf")
+                        Text("Tanaman")
                     }.tag(1)
                     ProfileView().tabItem {
                         Image(systemName: "person")

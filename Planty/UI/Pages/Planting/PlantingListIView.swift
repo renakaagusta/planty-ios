@@ -1,53 +1,47 @@
 //
-//  PlantListView.swift
+//  PlantingListView.swift
 //  Planty
 //
-//  Created by renaka agusta on 08/05/22.
+//  Created by renaka agusta on 13/05/22.
 //
 
 import SwiftUI
 import CloudKit
 
-struct PlantListView: View {
+struct PlantingListView: View {
     
     @State var plantList: [Plant] = []
     @State var plantingList: [Planting] = []
     @State var user: User = User()
+    @State var searchQuery: String = ""
+    
+    @State var moveToPlantingSelectPlantForm = false
+    
+    let columns = [
+        GridItem(.flexible()),
+        GridItem(.flexible()),
+    ]
     
     var body: some View {
         HStack{
-            Spacer().frame(width: 15)
             VStack(alignment: .leading){
-                AppTextField()
+                AppTextField(placeholder: "Cari tanaman anda", field: $searchQuery)
                 Spacer().frame(height: 30)
-                ScrollView(.horizontal) {
-                    HStack{
-                        NavigationLink(destination: PlantFormView()){
-                            AppElevatedButton(label: "+")
-                        }
-                        AppElevatedButton(label: "Semua", backgroundColor: Color.black)
-                        AppFlatButton(label: "")
+                VStack(alignment: .leading) {
+                    if(!plantList.isEmpty && !plantingList.isEmpty) {
+                        LazyVGrid(columns: columns, spacing: 20) {
+                            ForEach(plantingList, id: \.self) { planting in VStack {
+                                NavigationLink(destination: PlantingDetailView(planting: planting, plant: plantList.first(where: {$0.recordId == planting.plant}) ?? Plant())) {
+                                        PlantingCard( image: plantList.first(where: {$0.recordId == planting.plant})?.image ?? "",title: plantList.first(where: {$0.recordId == planting.plant})?.name ?? "",
+                                                     createdAt: planting.createdAt, quantity:String(planting.quantity))
+                                }
+                            }}
+                        }.padding(.horizontal)
                     }
                 }
                 Spacer().frame(height: 30)
-                VStack(alignment: .leading) {
-                    VStack{
-                        HStack{
-                            PlantingCard()
-                            Spacer()
-                            PlantingCard()
-                        }
-                        Spacer().frame(height: 30)
-                        HStack{
-                            PlantingCard()
-                            Spacer()
-                            PlantingCard()
-                        }
-                    }}
-                Spacer().frame(height: 30)
             }
-            Spacer().frame(width: 15)
-        }.onAppear{
+        }.task{
             user = UserDBManager().getUsers()[0]
             
             // PLANT LIST
@@ -64,6 +58,11 @@ struct PlantListView: View {
                     let temperature = record["temperature"] ?? ""
                     let recordId = record.recordID
                 
+                    print("plant")
+                    print(name)
+                    print(recordId.recordName)
+                print("---")
+                
                     plantList.append(Plant(
                         id:  Int.random(in: 0..<1000),
                         name: name as! String,
@@ -77,17 +76,21 @@ struct PlantListView: View {
             
             publicDatabase.add(plantListOperation)
             
+            do {sleep(1)}
+            
             // PLANTING LIST
             
             let plantingListQuery = CKQuery(recordType: "Planting", predicate: predicate)
                   
             let plantingListOperation = CKQueryOperation(query: plantingListQuery)
                   
-            plantingListOperation.recordFetchedBlock = { record in
+            await plantingListOperation.recordFetchedBlock = { record in
                 if(record["user"] == user.recordId) {
                     let plant = record["plant"] ?? ""
                     let quantity = String(record["quantity"] ?? 0)
                     let createdAt = record["createdAt"]
+                    print("planting")
+                    print(plant)
                     
                     plantingList.append(Planting(
                         id:  Int.random(in: 0..<1000),
@@ -99,12 +102,27 @@ struct PlantListView: View {
             }
             
             publicDatabase.add(plantingListOperation)
-        }
+        }.navigationTitle("Tanaman anda").toolbar{
+            ToolbarItem() {
+                        NavigationLink(destination: PlantingSelectPlantFormView()) {
+                            Button("+") {
+                                moveToPlantingSelectPlantForm = true
+                            }
+                        }
+            }
+        }.background(
+            NavigationLink(
+                destination: PlantingSelectPlantFormView(),
+                isActive: $moveToPlantingSelectPlantForm
+            ) {
+                EmptyView()
+            }.hidden() // The link is not visible to user
+        )
     }
 }
 
-struct PlantListView_Previews: PreviewProvider {
+struct PlantingListView_Previews: PreviewProvider {
     static var previews: some View {
-        PlantListView()
+        PlantingListView()
     }
 }

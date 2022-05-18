@@ -117,12 +117,12 @@ struct ProfileView: View {
                 plantingListOperation.recordFetchedBlock = { record in
                     if(record["user"] == user.recordId) {
                         let plant = record["plant"] ?? ""
-                        let quantity = record["quantity"] ?? ""
+                        let quantity = "0"
                         let createdAt = record["createdAt"]
                         plantingList.append(Planting(
                             id:  Int.random(in: 0..<1000),
                             plant: plant as! String,
-                            quantity: quantity as! Int,
+                            quantity: Int(quantity) as! Int,
                             createdAt: createdAt as! Date
                         ))
                     }
@@ -151,11 +151,6 @@ struct ProfileView: View {
                 }
                 
                 publicDatabase.add(postListOperation)
-                
-                print("planting")
-                print(plantingList)
-                print("post")
-                print(postList)
             }
         }
     }

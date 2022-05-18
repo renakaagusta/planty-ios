@@ -54,7 +54,7 @@ struct PlantyApp: App {
         WindowGroup {
             NavigationView{
                 ContentView()
-            }.navigationViewStyle(StackNavigationViewStyle()).navigationTitle("Kasir")
+            }.navigationViewStyle(StackNavigationViewStyle()).navigationTitle("Planty")
         }
     }
 }

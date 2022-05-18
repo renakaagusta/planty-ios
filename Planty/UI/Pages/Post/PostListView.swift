@@ -12,6 +12,7 @@ struct PostListView: View {
     
     @State var userList: [User] = []
     @State var postList: [Post] = []
+    @State var searchQuery: String = ""
     
     let columns = [
         GridItem(.flexible()),
@@ -21,13 +22,7 @@ struct PostListView: View {
     var body: some View {
         HStack{
             VStack(alignment: .leading){
-                AppTextField()
-                Spacer().frame(height: 30)
-                    HStack{
-                        NavigationLink(destination: PostFormView()){
-                            AppElevatedButton(label: "+")
-                        }
-                    }
+                AppTextField(placeholder: "Cari post", field: $searchQuery)
                 Spacer().frame(height: 30)
                 VStack(alignment: .leading) {
                     if(!userList.isEmpty && !postList.isEmpty) {
@@ -83,6 +78,14 @@ struct PostListView: View {
             }
             
             publicDatabase.add(postListOperation)
+        }.navigationTitle("Postingan").toolbar{
+            ToolbarItem() {
+                NavigationLink(destination: PostFormView()) {
+                    Button("+") {
+                                    
+                    }
+                }
+            }
         }
     }
 }

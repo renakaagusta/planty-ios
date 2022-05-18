@@ -1,18 +1,18 @@
 //
-//  PlantingListView.swift
+//  PlantListView.swift
 //  Planty
 //
-//  Created by renaka agusta on 13/05/22.
+//  Created by renaka agusta on 08/05/22.
 //
 
 import SwiftUI
 import CloudKit
 
-struct PlantingListView: View {
-    
+struct PlantListView: View {
     @State var plantList: [Plant] = []
-    @State var plantingList: [Planting] = []
+    @State var filteredPlantList: [Plant] = []
     @State var user: User = User()
+    @State var searchQuery: String = ""
     
     let columns = [
         GridItem(.flexible()),
@@ -21,20 +21,17 @@ struct PlantingListView: View {
     
     var body: some View {
         HStack{
-            VStack(alignment: .leading){
-                AppTextField()
-                Spacer().frame(height: 30)
-                    HStack{
-                        Text("-")
-                    }
+            List{
+                AppTextField(placeholder: "Cari tanaman", field: $searchQuery)
                 Spacer().frame(height: 30)
                 VStack(alignment: .leading) {
                     if(!plantList.isEmpty) {
                         LazyVGrid(columns: columns, spacing: 20) {
-                            ForEach(plantingList, id: \.self) { planting in VStack {
-                                PlantingCard( image: plantList.first(where: {$0.recordId == planting.plant})?.image ?? "",title: plantList.first(where: {$0.recordId == planting.plant})?.name ?? "",
-                                             createdAt: planting.createdAt, quantity:String(planting.quantity))
-                            }}
+                            ForEach(plantList, id: \.self) { plant in
+                                NavigationLink(destination: PlantDetailView(plant: plant)) {
+                                    PlantCard( image: plant.image ?? "",title: plant.name ?? "", temperature: plant.temperature, humidity: plant.humidity)
+                                }
+                            }
                         }.padding(.horizontal)
                     }
                 }
@@ -69,35 +66,12 @@ struct PlantingListView: View {
             }
             
             publicDatabase.add(plantListOperation)
-            
-            // PLANTING LIST
-            
-            let plantingListQuery = CKQuery(recordType: "Planting", predicate: predicate)
-                  
-            let plantingListOperation = CKQueryOperation(query: plantingListQuery)
-                  
-            plantingListOperation.recordFetchedBlock = { record in
-                if(record["user"] == user.recordId) {
-                    let plant = record["plant"] ?? ""
-                    let quantity = String(record["quantity"] ?? 0)
-                    let createdAt = record["createdAt"]
-                    
-                    plantingList.append(Planting(
-                        id:  Int.random(in: 0..<1000),
-                        plant: plant as! String,
-                        quantity: Int(quantity) ?? 0,
-                        createdAt: createdAt as! Date
-                    ))
-                }
-            }
-            
-            publicDatabase.add(plantingListOperation)
-        }
+        }.navigationTitle("Tanaman")
     }
 }
 
-struct PlantingListView_Previews: PreviewProvider {
+struct PlantListView_Previews: PreviewProvider {
     static var previews: some View {
-        PlantingListView()
+        PlantListView()
     }
 }
