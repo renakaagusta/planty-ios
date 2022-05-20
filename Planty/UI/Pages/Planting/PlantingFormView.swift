@@ -18,15 +18,15 @@ struct PlantingFormView: View {
     var body: some View {
         HStack{
             Spacer().frame(width: 15)
-            VStack(alignment: .leading){
-                Text("Tanaman")
+            List{
+                Text("Tanaman yang anda piliih").font(Font.body.weight(.bold)).foregroundColor(Color.black)
                 Spacer().frame(height: 4)
                 Text(plant.name)
-                Spacer().frame(height: 10)
-                Text("Jumlah tanaman")
+                Spacer().frame(height: 15)
+                Text("Jumlah tanaman").font(Font.body.weight(.bold)).foregroundColor(Color.black)
                 Spacer().frame(height: 4)
                 AppTextField(placeholder: "Jumlah tanaman", field: $quantity)
-                Spacer().frame(height: 10)
+                Spacer().frame(height: 20)
                 AppElevatedButton(label: "Tambahkan", onClick: {
                     let record = CKRecord(recordType: "Planting")
                     record.setValue(plant.recordId, forKey: "plant")
@@ -52,7 +52,13 @@ struct PlantingFormView: View {
             Spacer().frame(width: 15)
         }.navigationTitle("Tanaman baru").onAppear{
             user = UserDBManager().getUsers()[0]
-        }.navigate(to: PlantListView(), when: $moveToPlantingListView)
+        }.background(
+            NavigationLink(
+                destination: PlantingListView(),
+                isActive: $moveToPlantingListView
+            ) {
+                EmptyView()
+            }.hidden())
     }
 }
 

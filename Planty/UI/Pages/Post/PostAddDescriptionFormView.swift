@@ -11,11 +11,33 @@ struct PostAddDescriptionFormView: View {
     
     @State var moveToPostSelectImageForm = false
     @State var post = Post()
+    @State var title: String = ""
+    @State var description: String = ""
     
     var body: some View {
-        VStack {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-        }.navigate(to: PostSelectImageFormView(post: post), when: $moveToPostSelectImageForm)
+        List {
+            Text("Judul").font(Font.body.weight(.bold)).foregroundColor(Color.black)
+            AppTextField(field: $title)
+            Spacer().frame(height: 10)
+            Text("Deskripsi").font(Font.body.weight(.bold)).foregroundColor(Color.black)
+            AppTextField(field: $description)
+        }.navigationTitle("Postingan baru")
+            .toolbar{
+                ToolbarItem() {
+                        Button("Selanjutnya") {
+                            post.title = title
+                            post.description = description
+                            moveToPostSelectImageForm = true
+                        }
+                }
+            }.background(
+                NavigationLink(
+                    destination:  PostSelectImageFormView(post: post),
+                    isActive: $moveToPostSelectImageForm
+                ) {
+                    EmptyView()
+                }.hidden() // The link is not visible to user
+            )
     }
 }
 

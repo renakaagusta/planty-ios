@@ -42,13 +42,17 @@ struct OnBoardingView: View {
                 }
             }
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic)).frame( height: 380)
-            NavigationLink(destination: SignInView()){
-                AppElevatedButton(label: "Start", width: 140, onClick: {
+            AppElevatedButton(label: "Start", width: 140, onClick: {
                     moveToSignIn = true
                 })
-            }.offset(y: 240)
-        }.navigate(to: SignInView(), when: $moveToSignIn)
-
+        }.background(
+            NavigationLink(
+                destination: SignInView(),
+                isActive: $moveToSignIn
+            ) {
+                EmptyView()
+            }.hidden()
+        )
     }
 }
 

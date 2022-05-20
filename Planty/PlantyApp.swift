@@ -15,28 +15,6 @@ extension PlantyApp {
   }
 }
 
-extension View {
-    func navigate<NewView: View>(to view: NewView, when binding: Binding<Bool>) -> some View {
-        NavigationView {
-            ZStack {
-                self
-                    .navigationBarTitle("")
-                    .navigationBarHidden(true)
-
-                NavigationLink(
-                    destination: view
-                        .navigationBarTitle("")
-                        .navigationBarHidden(true),
-                    isActive: binding
-                ) {
-                    EmptyView()
-                }
-            }
-        }
-        .navigationViewStyle(.stack)
-    }
-}
-
 extension UINavigationController {
     open override func viewWillLayoutSubviews() {
         navigationBar.topItem?.backButtonDisplayMode = .minimal
@@ -49,12 +27,18 @@ struct PlantyApp: App {
     
     init() {
       setupAuthentication()
+           UITableView.appearance().separatorStyle = .none
+           UITableView.appearance().backgroundColor = UIColor.clear
+           UITableViewCell.appearance().backgroundColor = UIColor.clear
+           UITableView.appearance().separatorColor = .clear
+           UITableView.appearance().backgroundView = nil
+           UITableViewCell.appearance().backgroundView = nil
     }
     var body: some Scene {
         WindowGroup {
             NavigationView{
                 ContentView()
-            }.navigationViewStyle(StackNavigationViewStyle()).navigationTitle("Planty")
+            }.navigationViewStyle(StackNavigationViewStyle())
         }
     }
 }

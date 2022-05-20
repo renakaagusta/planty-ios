@@ -25,6 +25,8 @@
 		2F1A9D632834201200609C41 /* PlantingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1A9D622834201200609C41 /* PlantingDetailView.swift */; };
 		2F1A9D65283482BD00609C41 /* PostSelectImageFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1A9D64283482BD00609C41 /* PostSelectImageFormView.swift */; };
 		2F1A9D672834837B00609C41 /* PostAddDescriptionFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1A9D662834837B00609C41 /* PostAddDescriptionFormView.swift */; };
+		2F1A9D6A2835479300609C41 /* TextEditor in Frameworks */ = {isa = PBXBuildFile; productRef = 2F1A9D692835479300609C41 /* TextEditor */; };
+		2F1A9D6E2835679500609C41 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1A9D6D2835679500609C41 /* WebView.swift */; };
 		2F2931F8281A29E300F06C24 /* PlantyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2931F7281A29E300F06C24 /* PlantyApp.swift */; };
 		2F2931FA281A29E300F06C24 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2931F9281A29E300F06C24 /* ContentView.swift */; };
 		2F2931FC281A29E300F06C24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F2931FB281A29E300F06C24 /* Assets.xcassets */; };
@@ -43,7 +45,6 @@
 		2F5B4BF02826F734003697A3 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5B4BEF2826F734003697A3 /* SQLite.framework */; };
 		2F7299BD282F311E00E7C945 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 2F7299BC282F311E00E7C945 /* Lottie */; };
 		2F7299BF282F316600E7C945 /* OnBoardingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7299BE282F316600E7C945 /* OnBoardingCard.swift */; };
-		2F7299C1282F31B400E7C945 /* OnBoardingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7299C0282F31B400E7C945 /* OnBoardingAnimation.swift */; };
 		2F7299C3282F32CE00E7C945 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7299C2282F32CE00E7C945 /* OnBoardingView.swift */; };
 		2F7299C5282F337D00E7C945 /* OnBoardCardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7299C4282F337D00E7C945 /* OnBoardCardData.swift */; };
 		2F7299C7282F361000E7C945 /* Planting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7299C6282F361000E7C945 /* Planting.swift */; };
@@ -52,6 +53,9 @@
 		2F7299CD282F637600E7C945 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F7299CC282F637600E7C945 /* LaunchScreen.storyboard */; };
 		2F7299CF282FCC9700E7C945 /* CloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7299CE282FCC9700E7C945 /* CloudKit.swift */; };
 		2F7299D1282FD86900E7C945 /* PlantingListIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7299D0282FD86900E7C945 /* PlantingListIView.swift */; };
+		2F79064128371A7E000A788A /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F79064028371A7E000A788A /* TodoListView.swift */; };
+		2F79064328371AC8000A788A /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F79064228371AC8000A788A /* Todo.swift */; };
+		2F79064528371C36000A788A /* TodoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F79064428371C36000A788A /* TodoCard.swift */; };
 		2FAE544E282C9F460061979A /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAE544D282C9F460061979A /* CloudKit.framework */; };
 		2FBADB102826BDA300E6AE8B /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2FBADB0F2826BDA300E6AE8B /* FirebaseAnalyticsSwift */; };
 		2FBADB122826BDA300E6AE8B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 2FBADB112826BDA300E6AE8B /* FirebaseAuth */; };
@@ -113,6 +117,7 @@
 		2F1A9D622834201200609C41 /* PlantingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantingDetailView.swift; sourceTree = "<group>"; };
 		2F1A9D64283482BD00609C41 /* PostSelectImageFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostSelectImageFormView.swift; sourceTree = "<group>"; };
 		2F1A9D662834837B00609C41 /* PostAddDescriptionFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAddDescriptionFormView.swift; sourceTree = "<group>"; };
+		2F1A9D6D2835679500609C41 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		2F2931F4281A29E300F06C24 /* Planty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Planty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F2931F7281A29E300F06C24 /* PlantyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantyApp.swift; sourceTree = "<group>"; };
 		2F2931F9281A29E300F06C24 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -133,7 +138,6 @@
 		2F478DFF282804F50023CAFA /* UserCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollection.swift; sourceTree = "<group>"; };
 		2F5B4BEF2826F734003697A3 /* SQLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SQLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F7299BE282F316600E7C945 /* OnBoardingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCard.swift; sourceTree = "<group>"; };
-		2F7299C0282F31B400E7C945 /* OnBoardingAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingAnimation.swift; sourceTree = "<group>"; };
 		2F7299C2282F32CE00E7C945 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		2F7299C4282F337D00E7C945 /* OnBoardCardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardCardData.swift; sourceTree = "<group>"; };
 		2F7299C6282F361000E7C945 /* Planting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planting.swift; sourceTree = "<group>"; };
@@ -142,6 +146,9 @@
 		2F7299CC282F637600E7C945 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F7299CE282FCC9700E7C945 /* CloudKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKit.swift; sourceTree = "<group>"; };
 		2F7299D0282FD86900E7C945 /* PlantingListIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantingListIView.swift; sourceTree = "<group>"; };
+		2F79064028371A7E000A788A /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
+		2F79064228371AC8000A788A /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		2F79064428371C36000A788A /* TodoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCard.swift; sourceTree = "<group>"; };
 		2FAE544C282C9F360061979A /* Planty.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Planty.entitlements; sourceTree = "<group>"; };
 		2FAE544D282C9F460061979A /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		2FBADB1C2826C68000E6AE8B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -177,6 +184,7 @@
 				2F7299BD282F311E00E7C945 /* Lottie in Frameworks */,
 				2FBADB182826BDA300E6AE8B /* FirebaseStorage in Frameworks */,
 				2FBADB162826BDA300E6AE8B /* FirebaseFirestoreSwift in Frameworks */,
+				2F1A9D6A2835479300609C41 /* TextEditor in Frameworks */,
 				2FF92E0A2833398400D80CCA /* Alamofire in Frameworks */,
 				2FBADB1B2826C3C000E6AE8B /* GoogleSignIn in Frameworks */,
 				DD6F8BFA89DC589CD85B93B7 /* Pods_Planty.framework in Frameworks */,
@@ -364,6 +372,7 @@
 				2F293225281A307F00F06C24 /* HomeView.swift */,
 				2F7299C2282F32CE00E7C945 /* OnBoardingView.swift */,
 				2F1870A6281CD86900383F23 /* SignInView.swift */,
+				2F79064028371A7E000A788A /* TodoListView.swift */,
 				2F2931F9281A29E300F06C24 /* ContentView.swift */,
 				2F478DF92827D7470023CAFA /* DashboardView.swift */,
 			);
@@ -384,8 +393,8 @@
 		2F29322A281A30F300F06C24 /* Moleculs */ = {
 			isa = PBXGroup;
 			children = (
-				2F7299C0282F31B400E7C945 /* OnBoardingAnimation.swift */,
 				2F0D26D5282E15EA00EEF121 /* ImagePicker.swift */,
+				2F1A9D6D2835679500609C41 /* WebView.swift */,
 			);
 			path = Moleculs;
 			sourceTree = "<group>";
@@ -409,6 +418,7 @@
 				2F1A9D5B28341D9E00609C41 /* PlantCard.swift */,
 				2F34BCDA281ADF3A00F55687 /* ArticleCard.swift */,
 				2F7299BE282F316600E7C945 /* OnBoardingCard.swift */,
+				2F79064428371C36000A788A /* TodoCard.swift */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -438,6 +448,7 @@
 				2F7299C6282F361000E7C945 /* Planting.swift */,
 				2F7299C8282F369F00E7C945 /* Post.swift */,
 				2F7299CA282F372100E7C945 /* Plant.swift */,
+				2F79064228371AC8000A788A /* Todo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -512,6 +523,7 @@
 				2F7299BC282F311E00E7C945 /* Lottie */,
 				2FF92E092833398400D80CCA /* Alamofire */,
 				2FF92E0C283339AA00D80CCA /* SwiftyJSON */,
+				2F1A9D692835479300609C41 /* TextEditor */,
 			);
 			productName = Planty;
 			productReference = 2F2931F4281A29E300F06C24 /* Planty.app */;
@@ -595,6 +607,7 @@
 				2F7299BB282F311D00E7C945 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				2FF92E082833398400D80CCA /* XCRemoteSwiftPackageReference "Alamofire" */,
 				2FF92E0B283339A900D80CCA /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				2F1A9D682835479300609C41 /* XCRemoteSwiftPackageReference "TextEditor" */,
 			);
 			productRefGroup = 2F2931F5281A29E300F06C24 /* Products */;
 			projectDirPath = "";
@@ -749,7 +762,10 @@
 				2F1870AE281CDB6A00383F23 /* Colors.swift in Sources */,
 				2FE1F503281ABF7E00532AD0 /* AddButton.swift in Sources */,
 				2F00326128259507000D195E /* FirebaseAuthManager.swift in Sources */,
+				2F1A9D6E2835679500609C41 /* WebView.swift in Sources */,
 				2F1A9D672834837B00609C41 /* PostAddDescriptionFormView.swift in Sources */,
+				2F79064128371A7E000A788A /* TodoListView.swift in Sources */,
+				2F79064528371C36000A788A /* TodoCard.swift in Sources */,
 				2F293230281A315900F06C24 /* OutlinedButton.swift in Sources */,
 				2FF92E0F28336E5100D80CCA /* Date.swift in Sources */,
 				2F1A9D612834200000609C41 /* PostDetailView.swift in Sources */,
@@ -757,7 +773,6 @@
 				2F7299BF282F316600E7C945 /* OnBoardingCard.swift in Sources */,
 				2F478E00282804F50023CAFA /* UserCollection.swift in Sources */,
 				2F293226281A307F00F06C24 /* HomeView.swift in Sources */,
-				2F7299C1282F31B400E7C945 /* OnBoardingAnimation.swift in Sources */,
 				2F7299C7282F361000E7C945 /* Planting.swift in Sources */,
 				2F0D26D4282E128000EEF121 /* PostFormView.swift in Sources */,
 				2F0D26D9282E233500EEF121 /* PostListView.swift in Sources */,
@@ -784,6 +799,7 @@
 				2F1A9D632834201200609C41 /* PlantingDetailView.swift in Sources */,
 				2F2931FA281A29E300F06C24 /* ContentView.swift in Sources */,
 				2F1A9D5428341ABF00609C41 /* PlantingSelectPlantFormIView.swift in Sources */,
+				2F79064328371AC8000A788A /* Todo.swift in Sources */,
 				2F0D26D6282E15EA00EEF121 /* ImagePicker.swift in Sources */,
 				2F2931F8281A29E300F06C24 /* PlantyApp.swift in Sources */,
 				2F1870A7281CD86900383F23 /* SignInView.swift in Sources */,
@@ -1149,6 +1165,14 @@
 				minimumVersion = 0.3.2;
 			};
 		};
+		2F1A9D682835479300609C41 /* XCRemoteSwiftPackageReference "TextEditor" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nothingsh/TextEditor";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		2F7299BB282F311D00E7C945 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios";
@@ -1188,6 +1212,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2F0D26D0282E124800EEF121 /* XCRemoteSwiftPackageReference "MarkupEditor" */;
 			productName = MarkupEditor;
+		};
+		2F1A9D692835479300609C41 /* TextEditor */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F1A9D682835479300609C41 /* XCRemoteSwiftPackageReference "TextEditor" */;
+			productName = TextEditor;
 		};
 		2F7299BC282F311E00E7C945 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;

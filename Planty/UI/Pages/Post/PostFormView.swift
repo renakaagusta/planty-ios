@@ -6,52 +6,41 @@
 //
 
 import SwiftUI
-import MarkupEditor
+import TextEditor
 
-@available(iOS 15.0, *)
-extension PostFormView: MarkupDelegate {
-    func markupDidLoad(_ view: MarkupWKWebView, handler: (()->Void)?) {
-        markupEnv.observedWebView.selectedWebView = view
-    }
-}
-
-@available(iOS 15.0, *)
 struct PostFormView: View {
     
-    private let markupEnv = MarkupEnv(style: .compact)
-    private let showSubToolbar = ShowSubToolbar()
-    private var selectedWebView: MarkupWKWebView? { markupEnv.observedWebView.selectedWebView }
-    @State private var content: String = "<p>Hello world</p>"
+    @State var mutableContent = NSMutableAttributedString()
+    @State var content = ""
     @State var moveToPostAddDescriptionForm = false
     @State var post = Post()
     
     var body: some View {
-        VStack(spacing: 0) {
-            MarkupToolbar(markupDelegate: self)
-                .padding(EdgeInsets(top: 2, leading: 8, bottom: 2, trailing: 8))
-            Divider()
-            MarkupWebView(markupDelegate: self, boundContent: $content)
-                .overlay(
-                    SubToolbar(markupDelegate: self),
-                    alignment: .topLeading)
-        }
-        .navigationTitle("Postingan baru")
-        .toolbar{
-            ToolbarItem() {
-                        NavigationLink(destination: PostAddDescriptionFormView()) {
-                            Button("+") {
-                                post.content = content
-                                moveToPostAddDescriptionForm = true
-                            }
+            VStack(spacing: 0) {
+                RichTextEditor(richText: mutableContent){ newContent in
+                    content = newContent.string
+                }.frame(width: .infinity, height: .infinity)
+                .padding(10)
+                .background(
+                    Rectangle()
+                        .stroke(lineWidth: 1)
+                )
+    }.frame(width: .infinity, height: .infinity).navigationTitle("Postingan baru")
+            .toolbar{
+                ToolbarItem() {
+                        Button("Selanjutnya") {
+                            post.content = content
+                            moveToPostAddDescriptionForm = true
                         }
-            }
-        }.navigate(to: PostAddDescriptionFormView(post: post), when: $moveToPostAddDescriptionForm)
-        .environmentObject(markupEnv)
-        .environmentObject(showSubToolbar)
-        .environmentObject(markupEnv.toolbarPreference)
-        .environmentObject(markupEnv.selectionState)
-        .environmentObject(markupEnv.observedWebView)
-        
+                }
+            }.background(
+                NavigationLink(
+                    destination:  PostAddDescriptionFormView(),
+                    isActive: $moveToPostAddDescriptionForm
+                ) {
+                    EmptyView()
+                }.hidden() // The link is not visible to user
+            )
     }
 }
 

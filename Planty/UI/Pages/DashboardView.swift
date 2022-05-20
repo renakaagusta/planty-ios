@@ -10,14 +10,14 @@ import SwiftUI
 
 struct DashboardView: View {
     
+    @State var selection = 1
+    
     init() {
-        UITabBar.appearance().backgroundColor = UIColor.white
-        UITableView.appearance().backgroundColor = .clear
     }
     
     var body: some View {
             VStack(alignment: .center) {
-                TabView() {
+                TabView(selection: $selection) {
                     HomeView()
                         .tabItem {
                             Image(systemName: "homekit")
@@ -26,15 +26,17 @@ struct DashboardView: View {
                     PlantListView().tabItem {
                         Image(systemName: "leaf")
                         Text("Tanaman")
-                    }.tag(1)
+                    }.tag(2)
+                    TodoListView().tabItem {
+                        Image(systemName: "list.bullet")
+                        Text("Todo")
+                    }.tag(3)
                     ProfileView().tabItem {
                         Image(systemName: "person")
-                        Text("Profile")
-                    }.tag(1)
-                }.background(.white).accentColor(Color.primaryColor)
-            }.navigationBarBackButtonHidden(true).onAppear{
-                //ItemDBManager().deleteDatabase()
-            }
+                        Text("Profil")
+                    }.tag(4)
+                }.background(.black).accentColor(Color.primaryColor).navigationTitle(selection == 1 ? "Beranda" : (selection == 2 ? "Tanaman" : (selection == 3 ? "Todo" : "Profil")))
+            }.navigationBarBackButtonHidden(true)
     }
 }
 

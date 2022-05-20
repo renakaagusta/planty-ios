@@ -36,7 +36,14 @@ struct PlantingSelectPlantFormView: View {
                 }
                 Spacer().frame(height: 30)
             }
-        }.navigate(to: PlantingFormView(plant: selectedPlant), when: $moveToPlantingForm).onAppear{
+        }.background(
+            NavigationLink(
+                destination: PlantingFormView(plant: selectedPlant),
+                isActive: $moveToPlantingForm
+            ) {
+                EmptyView()
+            }.hidden() // The link is not visible to user
+        ).onAppear{
             user = UserDBManager().getUsers()[0]
             
             // PLANT LIST

@@ -171,6 +171,15 @@
           "revision": "b3dcd7dbd0d488e1a7077cb33b00f2083e382f07",
           "version": "5.0.1"
         }
+      },
+      {
+        "package": "TextEditor",
+        "repositoryURL": "https://github.com/nothingsh/TextEditor",
+        "state": {
+          "branch": "main",
+          "revision": "629abde655925898ce556b3a3b5d91c8a9d4a08a",
+          "version": null
+        }
       }
     ]
   },

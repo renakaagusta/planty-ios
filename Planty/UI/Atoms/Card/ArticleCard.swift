@@ -20,7 +20,7 @@ struct PostCard: View {
             VStack{
                 HStack{
                     Spacer().frame(width: 2)
-                    Text(post.title).font(Font.subheadline.bold()).foregroundColor(Color.white)
+                    Text(post.title).font(Font.subheadline.bold())
                     Spacer().frame(width: 2)
                 }
                 Spacer().frame(height: 15)
@@ -34,7 +34,6 @@ struct PostCard: View {
                         VStack(alignment: .leading){
                             Text(writer.username).font(Font.caption.bold())
                             Spacer().frame(height: 5)
-                            Text("17 Jan 2021").font(Font.caption2).foregroundColor(.gray)
                         }
                     }
                     Spacer()

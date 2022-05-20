@@ -32,10 +32,8 @@ struct SignInView: View {
     @ObservedObject var userCollection: UserCollection = UserCollection()
     
     init() {
-        //UserDBManager().deleteDatabase()
-        //print("Database deleted")
-        
-        handleSaveUserData(userId: "002001.199e1e71462345a59a0175093ef1f754.0245", username: "renakaagusta", firstname: "renaka", lastname: "agusta", email: "renakaagusta28@gmail.com", photo: "", phoneNumber: "", recordId: "5338B42B-C9E9-40C8-AF5A-E2DF71C03596")
+        UserDBManager().deleteDatabase()
+        print("Database deleted")
     }
     
     func handleSignUp(userId: String, firstname: String, lastname: String, email: String) {
@@ -70,10 +68,11 @@ struct SignInView: View {
             let firstname = record["firstname"]
             let lastname = record["lastname"]
             let username = record["username"]
-            let photo = record["photo"] ?? ""
+            let photo = record["photo"] as! CKAsset
             let phoneNumber = record["phoneNumber"] ?? ""
-            let recordId = record["recordId"] ?? ""
-            handleSaveUserData(userId: userId as! String, username: username as! String, firstname: firstname as! String, lastname: lastname as! String, email: email as! String, photo: photo as! String, phoneNumber: phoneNumber as! String, recordId: recordId as! String)
+            let recordId = record.recordID
+            
+            handleSaveUserData(userId: userId as! String, username: username as! String, firstname: firstname as! String, lastname: lastname as! String, email: email as! String, photo: photo.fileURL?.absoluteString ?? "https://d17ivq9b7rppb3.cloudfront.net/small/avatar/2020041418493935d6764e1170ae3f0ed8dd7db2da8968.png", phoneNumber: phoneNumber as! String, recordId: recordId.recordName)
             
         }
         
@@ -132,7 +131,14 @@ struct SignInView: View {
                 }
             }
             Spacer().frame(width: 20)
-        }.navigate(to: DashboardView(), when: $moveToDashboard)
+        }.background(
+            NavigationLink(
+                destination: DashboardView(),
+                isActive: $moveToDashboard
+            ) {
+                EmptyView()
+            }.hidden()
+        )
     }
 }
 

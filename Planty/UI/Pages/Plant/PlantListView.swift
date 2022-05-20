@@ -22,8 +22,7 @@ struct PlantListView: View {
     var body: some View {
         HStack{
             List{
-                AppTextField(placeholder: "Cari tanaman", field: $searchQuery)
-                Spacer().frame(height: 30)
+                Spacer().frame(height: 30).listRowBackground(Color.clear)
                 VStack(alignment: .leading) {
                     if(!plantList.isEmpty) {
                         LazyVGrid(columns: columns, spacing: 20) {
@@ -34,10 +33,12 @@ struct PlantListView: View {
                             }
                         }.padding(.horizontal)
                     }
-                }
-                Spacer().frame(height: 30)
+                }.listRowBackground(Color.clear)
+                Spacer().frame(height: 30).listRowBackground(Color.clear)
             }
         }.onAppear{
+            plantList = []
+            
             user = UserDBManager().getUsers()[0]
             
             // PLANT LIST

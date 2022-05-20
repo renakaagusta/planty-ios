@@ -9,7 +9,6 @@ import SwiftUI
 import CloudKit
 
 struct PlantingListView: View {
-    
     @State var plantList: [Plant] = []
     @State var plantingList: [Planting] = []
     @State var user: User = User()
@@ -24,9 +23,9 @@ struct PlantingListView: View {
     
     var body: some View {
         HStack{
-            VStack(alignment: .leading){
-                AppTextField(placeholder: "Cari tanaman anda", field: $searchQuery)
-                Spacer().frame(height: 30)
+            List{
+                AppTextField(placeholder: "Cari tanaman anda", field: $searchQuery).listRowBackground(Color.clear)
+                Spacer().frame(height: 30).listRowBackground(Color.clear)
                 VStack(alignment: .leading) {
                     if(!plantList.isEmpty && !plantingList.isEmpty) {
                         LazyVGrid(columns: columns, spacing: 20) {
@@ -38,10 +37,13 @@ struct PlantingListView: View {
                             }}
                         }.padding(.horizontal)
                     }
-                }
-                Spacer().frame(height: 30)
+                }.listRowBackground(Color.clear)
+                Spacer().frame(height: 30).listRowBackground(Color.clear)
             }
         }.task{
+            plantingList = []
+            plantList = []
+            
             user = UserDBManager().getUsers()[0]
             
             // PLANT LIST
@@ -57,11 +59,6 @@ struct PlantingListView: View {
                     let humidity = record["humidity"] ?? ""
                     let temperature = record["temperature"] ?? ""
                     let recordId = record.recordID
-                
-                    print("plant")
-                    print(name)
-                    print(recordId.recordName)
-                print("---")
                 
                     plantList.append(Plant(
                         id:  Int.random(in: 0..<1000),
@@ -105,7 +102,7 @@ struct PlantingListView: View {
         }.navigationTitle("Tanaman anda").toolbar{
             ToolbarItem() {
                         NavigationLink(destination: PlantingSelectPlantFormView()) {
-                            Button("+") {
+                            Button("Tambah") {
                                 moveToPlantingSelectPlantForm = true
                             }
                         }

@@ -20,15 +20,15 @@ struct PlantingCard: View {
                 Spacer()
                 Text(title).font(Font.body.weight(.bold)).foregroundColor(Color.black)
                 Spacer().frame(height: 2)
-                Text(age + " days").font(Font.caption).foregroundColor(Color.gray)
+                Text(age + " hari").font(Font.caption).foregroundColor(Color.gray)
                 Spacer().frame(height: 2)
                 Text(quantity).font(Font.caption2.weight(.bold)).foregroundColor(Color.black)
                 Spacer().frame(height: 20)
-            }.frame(width: 170, height: 200).background(Color.secondaryColor).cornerRadius(20)
+            }.frame(width: 140, height: 200).background(Color.secondaryColor).cornerRadius(20)
             AsyncImage(url: URL(string: image != "" ? image : "https://kgo.googleusercontent.com/profile_vrt_raw_bytes_1587515358_10512.png")!,
                               placeholder: { Text("Loading ...") },
                               image: { Image(uiImage: $0).resizable() }).frame( width: 110,height: 145).offset(y:-50)
-        }.onAppear {
+        }.padding().onAppear {
             let timeDifferenceInDays = ((NSDate() as Date - createdAt) as Double)/3600/24 as Double
             age = String(Int(timeDifferenceInDays))
         }

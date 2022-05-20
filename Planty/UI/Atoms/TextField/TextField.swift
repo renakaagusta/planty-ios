@@ -19,7 +19,7 @@ struct AppTextField: View {
                 if(image != "") {
                     Image(systemName: "magnifyingglass")
                 }
-                TextField(placeholder, text: $field).foregroundColor(Color.black).frame(minWidth:0).frame(minWidth: 0, maxWidth: .infinity, minHeight: 16, maxHeight: 16)
+                TextField(placeholder, text: $field).foregroundColor(Color.black).frame(minWidth:0).frame(minWidth: 0, maxWidth: .infinity, minHeight: 8, maxHeight: 8)
                     .keyboardType(numberInput ? .decimalPad : .default)
             }.padding().background(Color.lightGray).cornerRadius(10)
         }
